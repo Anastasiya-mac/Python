@@ -10,10 +10,10 @@
 
 import random
 
-def findCountX(N):
+def find_count_X(N):
     A = []
     
-    for _ in range(N-1):
+    for _ in range(0, N):
         A.append(random.randint(1, N))
 
     print(A)

@@ -37,13 +37,13 @@ dictionary_ru = {'А' : 1, 'В' : 1, 'Е' : 1, 'И' : 1, 'Н' : 1, 'О' : 1, 'Р
 'Ш' : 8, 'Э' : 8, 'Ю' : 8,
 'Ф' : 10, 'Щ' : 10, 'Ъ': 10 }
 
-sum = 0
+summa = 0
 word = input("Введите слово ")
 word = word.upper()
 for i in word:
-    sum = sum + int(dictionary_en.get(i) or 0) + int(dictionary_ru.get(i) or 0)
+    summa = summa + int(dictionary_en.get(i) or 0) + int(dictionary_ru.get(i) or 0)
 
-print(sum)
+print(summa)
 
 
 

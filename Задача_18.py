@@ -11,10 +11,10 @@
 
 import random
 
-def findAlmostX(N):
+def find_almost_X(N):
     A = []
     
-    for _ in range(N-1):
+    for _ in range(N):
         A.append(random.randint(1, N))
     
     print("Ваша последовательность: ", A)
@@ -23,14 +23,19 @@ def findAlmostX(N):
     A.append(X)
     #решила, что тимсорт использовать здесь выгоднее, чем циклы)
     A.sort()
-    
-    idx =A.index(X)
-    right = A[idx]-A[idx+1]
-    left = A[idx]-A[idx-1]
-    if abs(right) > abs(left):
-        print("Близкий по величине элемент ", A[idx-1])
-    else:
+
+    idx = A.index(X)
+    if idx == N:
+        return print("Близкий по величине элемент ", A[idx-1])
+    elif idx == 0:
         print("Близкий по величине элемент ", A[idx+1])
+    else:
+        right = A[idx]-A[idx+1]
+        left = A[idx]-A[idx-1]
+        if abs(right) > abs(left):
+            print("Близкий по величине элемент ", A[idx-1])
+        else:
+            print("Близкий по величине элемент ", A[idx+1])
 
 
 #управляющий блок
